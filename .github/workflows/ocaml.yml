@@ -10,6 +10,7 @@ on:
       - '**/dune'
       - 'duneproject'
       - '.github/workflows/ocaml.yml'
+      - '*.opam'
   pull_request:
     paths:
       - 'src/**/*.ml'
@@ -18,6 +19,7 @@ on:
       - '**/dune'
       - 'dune-project'
       - '.github/workflows/ocaml.yml'
+      - '*.opam'
 
 jobs:
   build:
