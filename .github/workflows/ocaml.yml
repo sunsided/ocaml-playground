@@ -39,7 +39,7 @@ jobs:
     - name: Lint with OCamlformat
       run: |
         eval $(opam env)
-        ocamlformat --check *.ml *.mli
+        ocamlformat --check src/*.ml src/*.mli test/*.ml
 
     - name: Build
       run: |
