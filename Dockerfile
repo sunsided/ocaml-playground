@@ -14,10 +14,13 @@ RUN sudo apt-get update && sudo apt-get install -y m4
 RUN opam install dune ounit2 ocamlformat
 
 # Lint with OCamlformat
-RUN eval $(opam env) && ocamlformat src/*.ml src/*.ml test/*.ml
+RUN eval $(opam env) && ocamlformat --check src/*.ml src/*.ml test/*.ml
 
 # Build the project
 RUN eval $(opam env) && dune build @all
+
+# Run tests
+RUN evail $(opam env) && done runtest
 
 # Command to run tests
 CMD ["dune", "runtest"]
