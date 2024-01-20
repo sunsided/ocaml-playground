@@ -1,0 +1,4 @@
+(test
+ (name fibonacci_test)
+ (libraries ounit2 fibonacci))
+
