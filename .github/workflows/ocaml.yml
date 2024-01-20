@@ -1,0 +1,38 @@
+---
+name: OCaml Build
+
+on:
+  push:
+    paths:
+      - '**.ml'
+  pull_request:
+    paths:
+      - '**.ml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup OCaml
+      uses: avsm/setup-ocaml@v2
+      with:
+        ocaml-compiler: '5.1'
+
+    - name: Install Dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y opam
+        opam init -y
+        opam install -y dune
+
+    - name: Build
+      run: |
+        dune build @all
+
+    - name: Run Tests (optional)
+      run: |
+        dune runtest
+
