@@ -5,6 +5,7 @@ set -euo pipefail
 IMAGE_NAME="ocaml-playground"
 
 echo "Building Docker image for OCaml project..."
+export BUILDKIT_PROGRESS=plain
 docker build -t $IMAGE_NAME .
 
 if [ $? -eq 0 ]; then

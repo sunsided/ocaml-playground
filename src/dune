@@ -1,4 +1,8 @@
 (library
  (name fibonacci)
- (public_name fibonacci))
+ (modules fibonacci))
 
+(executable
+ (name fibonacci_main)
+ (modules fibonacci_main)
+ (libraries fibonacci))
