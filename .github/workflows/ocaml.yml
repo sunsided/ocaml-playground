@@ -9,6 +9,7 @@ on:
       - 'test/**/*.ml'
       - '**/dune'
       - 'duneproject'
+      - '.github/workflows/ocaml.yml'
   pull_request:
     paths:
       - 'src/**/*.ml'
@@ -16,6 +17,7 @@ on:
       - 'test/**/*.ml'
       - '**/dune'
       - 'dune-project'
+      - '.github/workflows/ocaml.yml'
 
 jobs:
   build:
