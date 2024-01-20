@@ -10,11 +10,5 @@ let test_fibonacci _ =
   assert_equal 5 (fibonacci 5);
   assert_equal 8 (fibonacci 6)
 
-let suite =
-  "TestFibonacci" >::: [
-    "fibonacci" >:: test_fibonacci
-  ]
-
-let () =
-  run_test_tt_main suite
-
+let suite = "TestFibonacci" >::: [ "fibonacci" >:: test_fibonacci ]
+let () = run_test_tt_main suite
