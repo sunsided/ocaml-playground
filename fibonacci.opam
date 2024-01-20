@@ -1,0 +1,16 @@
+opam-version: "2.0"
+maintainer: "widemeadows@gmail.com"
+authors: ["Markus Mayer"]
+license: "MIT"
+# homepage: "https://example.com"
+# bug-reports: "https://example.com/issues"
+# dev-repo: "git+https://github.com/yourusername/your-repo.git"
+synopsis: "Fibonacci library"
+description: """
+This is a library for generating Fibonacci sequences.
+"""
+
+depends: [
+  "ocaml" {>= "4.02.3"}
+  "dune" {build}
+]
